@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.clock__container {
+    position: relative;
+    background: steelblue;
+    width: 20em;
+    height: 10em;
+    border-radius: 20em 20em 0em 0em;
+    border-top: 5px solid red;
+    border-left: 5px solid red;
+    border-right: 5px solid red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clock__wrapper {
+    min-width: 320px;
+    min-height: 320px;
+    margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.clock__view_top {
+    position: absolute;
+    font-size: 2em;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    top: 10%;
+    left: calc(50% - 15px);
 }
 
-.App-link {
-  color: #61dafb;
+.clock__view_bottom {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    top: calc(190% - 10px);
+    left: calc(50% - 15px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clock__view_left {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    top: calc(100% - 10px);
+    left: calc(15% - 30px);
+}
+
+
+.clock__view_right {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    left: 85%;
+    top: calc(100% - 10px);
+}
+
+.clock__s-arrow {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 1px solid black;
+    width: 100px;
+    transition: all 0.2s ease-in;
+}
+.clock__m-arrow {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 2px solid black;
+    width: 100px;
+    transition: all 0.3s ease-in;
+}
+
+.clock__h-arrow {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 3px solid black;
+    width: 50px;
+    transition: all 0.3s ease-in;
+}
+
+.clock__title {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 50%;
 }
